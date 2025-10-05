@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lê Huỳnh Kiều Oanh - 23133052</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+  :root {
+    --bg-color: #f0f8ff;
+    --card-color: rgba(255, 255, 255, 0.9);
+    --accent-color: #4a90e2;
+    --accent-light: #7db3f5;
+    --text-color: #2c3e50;
+    --muted-color: #5d6d7e;
+    --highlight-color: #d4e6f7;
+    --shadow-color: rgba(74, 144, 226, 0.2);
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #e3f2fd 0%, #fce4ec 50%, #fff9c4 100%);
+    color: var(--text-color);
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '🌸 ✨ 🌺 ⭐ 🌼 💫 🌻 ✨ 🌸 ⭐';
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    font-size: 2rem;
+    text-align: center;
+    z-index: 0;
+    animation: float 3s ease-in-out infinite;
+    opacity: 0.6;
+  }
+
+  body::after {
+    content: '⭐ 🌺 ✨ 🌸 💫 🌼 ⭐ 🌻 ✨ 🌺';
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    font-size: 2rem;
+    text-align: center;
+    z-index: 0;
+    animation: float 3s ease-in-out infinite 1.5s;
+    opacity: 0.6;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: var(--card-color);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 25px var(--shadow-color);
+    position: relative;
+    z-index: 1;
+  }
+
+  .container::before {
+    content: '🌟';
+    position: absolute;
+    top: -15px;
+    right: 30px;
+    font-size: 3rem;
+    animation: twinkle 2s ease-in-out infinite;
+  }
+
+  .container::after {
+    content: '🌸';
+    position: absolute;
+    top: -10px;
+    left: 30px;
+    font-size: 2.5rem;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  header {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid var(--highlight-color);
+    position: relative;
+  }
+
+  header::before {
+    content: '✨';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    animation: twinkle 1.5s ease-in-out infinite;
+  }
+
+  header::after {
+    content: '💐';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 2rem;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .avatar {
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    border: 3px solid var(--accent-color);
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    position: relative;
+  }
+  
+  .avatar::before {
+    content: '🌺';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 2rem;
+    z-index: 2;
+    animation: twinkle 2s ease-in-out infinite;
+  }
+  
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .intro h1 {
+    margin: 0 0 10px;
+    font-size: 2rem;
+    color: var(--accent-color);
+  }
+  .intro p {
+    margin: 5px 0;
+    color: var(--muted-color);
+    font-size: 1rem;
+  }
+
+  .meta {
+    margin-top: 15px;
+    list-style: none;
+    padding: 0;
+  }
+  .meta li {
+    margin: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: var(--text-color);
+    font-size: 0.95rem;
+  }
+  .meta li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+  }
+
+  section {
+    margin-top: 35px;
+  }
+  section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--highlight-color);
+    display: inline-block;
+    padding-bottom: 6px;
+    position: relative;
+    padding-left: 40px;
+  }
+
+  section h2::before {
+    content: '🎓';
+    position: absolute;
+    left: 0;
+    font-size: 1.8rem;
+  }
+
+  section:nth-child(3) h2::before {
+    content: '📚';
+  }
+
+  .info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .info-list li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  .info-list li span {
+    color: var(--muted-color);
+    margin-right: 8px;
+  }
+  .info-list a {
+    color: var(--accent-color);
+    text-decoration: none;
+  }
+  .info-list a:hover {
+    text-decoration: underline;
+  }
+
+  .timeline {
+    margin-top: 25px;
+  }
+
+  .chapter {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #d4e6f7 0%, #fce4ec 100%);
+    border-radius: 15px;
+    border-left: 4px solid var(--accent-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+
+  .chapter::before {
+    content: '⭐';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    animation: twinkle 2s ease-in-out infinite;
+  }
+
+  .chapter:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 15px var(--shadow-color);
+  }
+
+  .chapter h3 {
+    font-size: 1.3rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+
+  .card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+
+  .card:hover {
+    background: #f8fcff;
+    transform: translateY(-2px);
+  }
+
+  .card h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text-color);
+  }
+
+  .card p {
+    font-size: 0.9rem;
+    color: var(--muted-color);
+    margin-bottom: 10px;
+  }
+
+  .link-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background: linear-gradient(135deg, #4a90e2 0%, #7db3f5 100%);
+    color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+    position: relative;
+  }
+
+  .link-btn::before {
+    content: '🚀';
+    margin-right: 5px;
+  }
+
+  .link-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #7db3f5 0%, #4a90e2 100%);
+  }
+
+  footer {
+    margin-top: 50px;
+    padding-top: 20px;
+    text-align: center;
+    color: var(--muted-color);
+    font-size: 0.9rem;
+    border-top: 2px solid var(--highlight-color);
+  }
+
+  @media (max-width: 600px) {
+    header { 
+      flex-direction: column; 
+      text-align: center; 
+    }
+    .avatar { 
+      width: 120px; 
+      height: 120px; 
+    }
+    .container {
+      padding: 25px;
+      margin: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">
+        <img src="./images/oanh.jpg" alt="Ảnh đại diện">
+      </div>
+      <div class="intro">
+        <h1>Lê Huỳnh Kiều Oanh</h1>
+        <p>Sinh viên Trường Đại học Sư phạm Kĩ thuật TP. Hồ Chí Minh</p>
+        <p><strong>MSSV: 23133052</strong></p>
+        <ul class="meta">
+          <li>Sinh viên ngành KTDL</li>
+          <li>Lập trình Web</li>
+          <li>TP. HCM</li>
+        </ul>
+      </div>
+    </header>
+
+    <section>
+      <h2>Danh sách bài tập</h2>
+      <div class="timeline">
+        <div class="chapter">
+          <h3>Week 1</h3>
+          <div class="card">
+            <h4>Bài tập 1</h4>
+            <p>Website cá nhân</p>
+            <p>https://oanh.odoo.com/</p>
+            <a href="https://oanh.odoo.com/" target="_blank" class="link-btn">Truy cập</a>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <h3>Week 2</h3>
+          <div class="card">
+            <h4>Bài tập 2</h4>
+            <p>Email Website MVC</p>
+            <p>https://emaillist-bttuan2.onrender.com</p>
+            <a href="https://emaillist-bttuan2.onrender.com" target="_blank" class="link-btn">Truy cập</a>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <h3>Week 4</h3>
+          <div class="card">
+            <h4>Bài tập 3</h4>
+            <p>Murach Survey</p>
+            <p>https://deloywebcoban.onrender.com/</p>
+            <a href="https://deloywebcoban.onrender.com/" target="_blank" class="link-btn">Truy cập</a>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <h3>Week 5</h3>
+          <div class="card">
+            <h4>Bài tập 4</h4>
+            <p>Murach Survey</p>
+            <p>https://ltweb-baituan3.onrender.com/</p>
+            <a href="https://ltweb-baituan3.onrender.com/" target="_blank" class="link-btn">Truy cập</a>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <h3>Week 6</h3>
+          <div class="card">
+            <h4>Bài tập 6.1</h4>
+            <p>Điền form join email</p>
+            <p>https://bt-chuong6-jstl.onrender.com/</p>
+            <a href="https://bt-chuong6-jstl.onrender.com/" target="_blank" class="link-btn">Truy cập</a>
+          </div>
+          <div class="card">
+            <h4>Bài tập 6.2</h4>
+            <p>Điền form survey</p>
+            <p>https://btch6-2-23133052.onrender.com/</p>
+            <a href="https://btch6-2-23133052.onrender.com/" target="_blank" class="link-btn">Truy cập</a>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <h3>Week 7 (Chương 8, 9)</h3>
+          <div class="card">
+            <h4>Bài tập 8</h4>
+            <p>https://bt-ch08.onrender.com</p>
+            <p>EL</p>
+            
+            <a href="https://bt-ch08.onrender.com" target="_blank" class="link-btn">Truy cập</a>
+          </div>
+          <div class="card">
+            <h4>Bài tập 9.1</h4>
+            <p>https://lab09-1-koanh.onrender.com</p>
+            <p>JSTL</p>
+            <a href="https://lab09-1-koanh.onrender.com" target="_blank" class="link-btn">Truy cập</a>
+          </div>
+          <div class="card">
+            <h4>Bài tập 9.2</h4>
+            <p>https://lab09-2-koanh.onrender.com/</p>
+            <p>JSTL</p>
+            <a href="https://lab09-2-koanh.onrender.com/" target="_blank" class="link-btn">Truy cập</a>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <h3>Week 8</h3>
+          <div class="card">
+            <h4>Bài tập 7-1&2</h4>
+            <p>https://bt-ch07-koanhlh.onrender.com/</p>
+            <p>Làm lại bài tập về giỏ hàng</p>
+            <a href="https://bt-ch07-koanhlh.onrender.com/" target="_blank" class="link-btn">Truy cập</a>
+          </div>
+          <div class="card">
+            <h4>Bài tập 7-3</h4>
+            <p>Làm lại bài tập về music store</p>
+            <p>https://lab7-3-1.onrender.com/</p>
+            <a href="https://lab7-3-1.onrender.com/" target="_blank" class="link-btn">Truy cập</a>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <h3>Week 9</h3>
+          <div class="card">
+            <h4>Bài tập 12</h4>
+            <p>https://btc12-oanhsqlgateway.onrender.com</p>
+            <p>Dùng JDBC để kết nối đến CSDL cho web</p>
+            <a href="https://btc12-oanhsqlgateway.onrender.com" target="_blank" class="link-btn">Truy cập</a>
+          </div>
+        </div>
+
+        <div class="chapter">
+          <h3>Week 10</h3>
+          <div class="card">
+            <h4>Bài tập 13</h4>
+            <p>https://baitap13-23133052.onrender.com</p>
+            <p>Dùng JPA để tương tác với CSDL cho web</p>
+            <a href="https://baitap13-23133052.onrender.com" target="_blank" class="link-btn">Truy cập</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 Lê Huỳnh Kiều Oanh (23133052) — Trang giới thiệu cá nhân & Bài tập Lập trình Web.
+    </footer>
+  </div>
+</body>
+</html>
