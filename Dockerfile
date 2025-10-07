@@ -26,7 +26,7 @@ RUN rm -rf /usr/local/tomcat/webapps/*
 
 # Copy file .war đã được build ở GIAI ĐOẠN 1 vào thư mục webapps của Tomcat
 # --from=builder chỉ định lấy file từ giai đoạn "builder" ở trên
-COPY --from=builder /app/target/personal-website.war /usr/local/tomcat/webapps/ROOT.war
+COPY --from=build /app/target/*.war /usr/local/tomcat/webapps/ROOT.war
 
 # Mở cổng 8080
 EXPOSE 8080
